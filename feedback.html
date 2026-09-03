@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dors — Modal and toast components</title>
+    <meta name="description" content="Dors modal dialog and toast notification components." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="feedback.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Dors home"><img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" /><span>Dors</span></a>
+      <span class="header-label">Component / Feedback</span>
+    </header>
+
+    <main class="component-page">
+      <section class="page-intro">
+        <p class="eyebrow">Feedback language</p>
+        <h1>Make the moment<br /><em>easy to read.</em></h1>
+        <p>A modal asks for a meaningful decision. A toast confirms what just happened. Neither needs to shout.</p>
+      </section>
+
+      <section class="specimen" aria-labelledby="modal-title">
+        <div class="section-heading"><p class="eyebrow">01 / Modal</p><h2 id="modal-title">Confirm before the point of no return</h2></div>
+        <div class="demo-stage modal-stage">
+          <div class="fake-page" aria-hidden="true"><span></span><span></span><span></span><div></div></div>
+          <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title" aria-describedby="dialog-copy">
+            <div class="dialog-icon" aria-hidden="true">!</div>
+            <div class="dialog-copy"><h3 id="dialog-title">Delete “Portfolio Kit”?</h3><p id="dialog-copy">This removes the product from your listings. Existing buyers will keep access, but you won’t be able to sell it again.</p></div>
+            <div class="dialog-actions"><button class="button button-secondary" id="cancel-delete" type="button">Keep product</button><button class="button button-danger" id="confirm-delete" type="button">Delete product</button></div>
+          </div>
+        </div>
+        <div class="demo-controls"><button class="button button-primary" id="open-modal" type="button">Open delete dialog</button><span>Destructive action / explicit consequence</span></div>
+      </section>
+
+      <section class="specimen" aria-labelledby="toast-title">
+        <div class="section-heading"><p class="eyebrow">02 / Toast</p><h2 id="toast-title">Confirm the small moments</h2></div>
+        <div class="toast-stage">
+          <div class="toast toast-success" role="status"><span class="toast-symbol" aria-hidden="true">✓</span><div><strong>Product published</strong><p>Your listing is now live in the marketplace.</p></div><button class="toast-close" type="button" aria-label="Dismiss success notification">×</button></div>
+          <div class="toast toast-error" role="alert"><span class="toast-symbol" aria-hidden="true">!</span><div><strong>Upload failed</strong><p>The file is over 50 MB. Choose a smaller file and try again.</p></div><button class="toast-close" type="button" aria-label="Dismiss error notification">×</button></div>
+        </div>
+        <div class="demo-controls"><button class="button button-primary" id="show-success" type="button">Show success toast</button><button class="button button-secondary" id="show-error" type="button">Show error toast</button></div>
+      </section>
+
+      <section class="specification" aria-labelledby="spec-title">
+        <div class="section-heading"><p class="eyebrow">03 / Rules</p><h2 id="spec-title">Quiet hierarchy, clear exit</h2></div>
+        <dl class="token-list">
+          <div><dt>Modal radius</dt><dd>16px container / 8px buttons</dd></div>
+          <div><dt>Modal width</dt><dd>Min(100% - 32px, 460px)</dd></div>
+          <div><dt>Backdrop</dt><dd>Ink Slate at 52% opacity</dd></div>
+          <div><dt>Toast position</dt><dd>24px from bottom and right</dd></div>
+          <div><dt>Success</dt><dd>Moss confirmation, plain outcome</dd></div>
+          <div><dt>Error</dt><dd>Rust problem, specific next step</dd></div>
+        </dl>
+      </section>
+    </main>
+    <footer class="site-footer"><span>Dors / Interface system</span><a href="index.html">Back to Dors <span aria-hidden="true">↗</span></a></footer>
+
+    <div class="modal-layer" id="modal-layer" hidden>
+      <div class="backdrop" id="backdrop"></div>
+      <div class="live-dialog" role="dialog" aria-modal="true" aria-labelledby="live-dialog-title" aria-describedby="live-dialog-copy" tabindex="-1">
+        <button class="dialog-close" id="close-modal" type="button" aria-label="Close dialog">×</button>
+        <div class="dialog-icon" aria-hidden="true">!</div><h2 id="live-dialog-title">Delete “Portfolio Kit”?</h2><p id="live-dialog-copy">This removes the product from your listings. Existing buyers will keep access, but you won’t be able to sell it again.</p>
+        <div class="dialog-actions"><button class="button button-secondary" id="cancel-live-delete" type="button">Keep product</button><button class="button button-danger" id="confirm-live-delete" type="button">Delete product</button></div>
+      </div>
+    </div>
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <script src="feedback.js"></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dors — Form input components</title>
+    <meta name="description" content="Dors accessible form input component states." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="inputs.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Dors home"><img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" /><span>Dors</span></a>
+      <span class="header-label">Component / Input</span>
+    </header>
+
+    <main class="component-page">
+      <section class="page-intro">
+        <p class="eyebrow">Form language</p>
+        <h1>Give people<br /><em>something to say.</em></h1>
+        <p>Every field names itself, leaves room for a question, and makes a problem visible without making it dramatic.</p>
+      </section>
+
+      <section class="specimen" aria-labelledby="fields-title">
+        <div class="section-heading"><p class="eyebrow">01 / Fields</p><h2 id="fields-title">The working set</h2></div>
+        <div class="field-grid">
+          <div class="field-demo">
+            <label for="project-name">Project name</label>
+            <input id="project-name" type="text" placeholder="e.g. North Studio" />
+            <p class="helper">Use a name people will recognize.</p>
+          </div>
+          <div class="field-demo">
+            <label for="project-type">Project type</label>
+            <select id="project-type">
+              <option value="">Choose a type</option>
+              <option>Brand identity</option>
+              <option>Web design</option>
+              <option>Photography</option>
+            </select>
+            <p class="helper">This helps organize your work.</p>
+          </div>
+          <div class="field-demo wide-field">
+            <label for="project-summary">Project summary</label>
+            <textarea id="project-summary" rows="5" placeholder="What did you make, and why did it matter?"></textarea>
+            <p class="helper">A short description is enough. You can add the detail later.</p>
+          </div>
+          <div class="field-demo wide-field">
+            <label for="project-file">Project file</label>
+            <label class="file-drop" for="project-file">
+              <span class="upload-mark" aria-hidden="true">↑</span>
+              <span><strong>Choose a file</strong><small>PDF, ZIP, or Figma file up to 50 MB</small></span>
+            </label>
+            <input id="project-file" class="file-input" type="file" accept=".pdf,.zip,.fig,.figma" />
+            <p class="helper">Your file stays attached to this project until you publish.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="specimen" aria-labelledby="states-title">
+        <div class="section-heading"><p class="eyebrow">02 / States</p><h2 id="states-title">Feedback people can act on</h2></div>
+        <div class="state-grid">
+          <div class="field-demo">
+            <span class="demo-label">Focused</span>
+            <label for="focused-field">Website URL</label>
+            <input id="focused-field" class="is-focused" type="url" value="dors.co/northstudio" />
+            <p class="helper">Your public address.</p>
+          </div>
+          <div class="field-demo">
+            <span class="demo-label error-label">Error</span>
+            <label for="error-field">Email address</label>
+            <input id="error-field" class="has-error" type="email" value="ava@" aria-invalid="true" aria-describedby="email-error" />
+            <p class="error-message" id="email-error"><span aria-hidden="true">!</span> Enter a complete email address, like ava@example.com.</p>
+          </div>
+          <div class="field-demo">
+            <span class="demo-label">Disabled</span>
+            <label for="disabled-field">Custom domain</label>
+            <input id="disabled-field" type="text" value="Connect a plan to add a domain" disabled />
+            <p class="helper">Available on the Pro plan.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="specification" aria-labelledby="spec-title">
+        <div class="section-heading"><p class="eyebrow">03 / Rules</p><h2 id="spec-title">One clear reading order</h2></div>
+        <dl class="token-list">
+          <div><dt>Label</dt><dd>Above the field, 8px gap</dd></div>
+          <div><dt>Control</dt><dd>48px min-height, 10px radius</dd></div>
+          <div><dt>Helper text</dt><dd>12px below, graphite</dd></div>
+          <div><dt>Focus</dt><dd>2px Kiln Orange outline, 3px offset</dd></div>
+          <div><dt>Error</dt><dd>Rust border plus specific next step</dd></div>
+          <div><dt>File upload</dt><dd>Native input preserved, visible drop target</dd></div>
+        </dl>
+      </section>
+    </main>
+    <footer class="site-footer"><span>Dors / Interface system</span><a href="index.html">Back to Dors <span aria-hidden="true">↗</span></a></footer>
+  </body>
+</html>

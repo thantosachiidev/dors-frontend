@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dors — Create account</title>
+    <link rel="icon" type="image/png" href="dors-high-resolution-logo-grayscale-transparent.png" />
+    <meta
+      name="description"
+      content="Create an account on Dors to build a portfolio, sell work, and manage your marketplace presence."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="brand-panel" aria-label="Brand introduction">
+        <div class="brand-block">
+          <div class="brand-row">
+            <img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" class="brand-mark" />
+            <span class="brand-name">Dors</span>
+          </div>
+          <p class="tagline">Build a portfolio that feels like your work.</p>
+        </div>
+      </aside>
+
+      <main class="auth-panel">
+        <div class="auth-card">
+          <p class="eyebrow">Create account</p>
+          <h1>Start building.</h1>
+
+          <form id="signup-form" class="sign-up-form" novalidate>
+            <label class="field-label" for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+
+            <label class="field-label" for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+
+            <label class="field-label" for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Create a password" autocomplete="new-password" required minlength="8" />
+
+            <div class="field-block">
+              <label class="field-label">Account type</label>
+              <div class="segmented-group" role="radiogroup" aria-label="Account type">
+                <label class="segment-option">
+                  <input type="radio" name="accountType" value="creator" checked />
+                  <span>Creator</span>
+                </label>
+                <label class="segment-option">
+                  <input type="radio" name="accountType" value="buyer" />
+                  <span>Buyer</span>
+                </label>
+                <label class="segment-option">
+                  <input type="radio" name="accountType" value="both" />
+                  <span>Both</span>
+                </label>
+              </div>
+            </div>
+
+            <div id="signup-message" class="form-message" aria-live="polite"></div>
+
+            <button class="primary-button" type="submit">Create account</button>
+          </form>
+
+          <div class="divider" aria-label="or continue with social sign up">
+            <span>or</span>
+          </div>
+
+          <button id="google-signup" class="social-button" type="button" aria-label="Continue with Google">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="#EA4335" d="M12 10.2v3.9h5.4c-.2 1.2-.9 2.3-1.9 3l3.1 2.4c1.8-1.7 2.8-4.2 2.8-7.3 0-.7-.1-1.4-.2-2H12z"/>
+              <path fill="#34A853" d="M12 20.3c2.6 0 4.8-.9 6.4-2.3l-3.1-2.4c-.9.6-2 .9-3.3.9-2.5 0-4.7-1.7-5.5-4H.8v2.5A9.3 9.3 0 0 0 12 20.3z"/>
+              <path fill="#FBBC05" d="M6.5 18.4A9.1 9.1 0 0 1 6.1 12c0-1 .2-2 .5-2.9L.8 6.6A9.4 9.4 0 0 0 2.7 12c0 1.5.4 3 .9 4.3l3-2.9z"/>
+              <path fill="#4285F4" d="M12 3.8c1.4 0 2.7.5 3.7 1.4l2.8-2.8A9.4 9.4 0 0 0 12 0a9.3 9.3 0 0 0-8.3 5.1l3.6 2.8c.8-2.3 2.9-4.1 5.7-4.1z"/>
+            </svg>
+            Continue with Google
+          </button>
+
+          <p class="terms-copy">
+            By creating an account, you agree to our
+            <a href="index.html" class="text-link">Terms</a>
+            and
+            <a href="index.html" class="text-link">Privacy Policy</a>.
+          </p>
+
+          <p class="signin-copy">
+            Already have an account?
+            <a href="signin.html" class="text-link">Sign in</a>
+          </p>
+        </div>
+      </main>
+    </div>
+
+    <script src="./api-config.js"></script>
+    <script type="module" src="./signup.js"></script>
+  </body>
+</html>

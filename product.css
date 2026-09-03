@@ -1,0 +1,384 @@
+:root {
+  --ink-slate: #1f2a37;
+  --graphite: #3d4451;
+  --bone: #f4f1ec;
+  --kiln-orange: #c4622d;
+  --moss: #4b7a5b;
+  --white: #ffffff;
+  --border: rgba(31, 42, 55, 0.12);
+  --shadow-soft: 0 18px 32px rgba(31, 42, 55, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: "IBM Plex Sans", sans-serif;
+  background: var(--bone);
+  color: var(--ink-slate);
+}
+
+button,
+input,
+a {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(244, 241, 236, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 78px;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink-slate);
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 30px;
+  height: 30px;
+}
+
+.brand span {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  font-size: 1.4rem;
+}
+
+.main-nav,
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.main-nav a,
+.nav-link {
+  color: var(--graphite);
+  text-decoration: none;
+  font-size: 0.96rem;
+}
+
+.main-nav a.active {
+  color: var(--ink-slate);
+  font-weight: 600;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button-primary {
+  background: var(--ink-slate);
+  border-color: var(--ink-slate);
+  color: var(--white);
+  box-shadow: 0 10px 18px rgba(31, 42, 55, 0.12);
+}
+
+.product-page {
+  padding: 48px 0 80px;
+}
+
+.product-shell {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 0.75fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.gallery-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.feature-image {
+  min-height: 560px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1f2a37 0%, #4d5c67 100%);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.thumb-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.mini-thumb {
+  min-height: 116px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.thumb-one {
+  background: linear-gradient(135deg, #1f2a37 0%, #425365 100%);
+}
+
+.thumb-two {
+  background: linear-gradient(135deg, #f4f1ec 0%, #d8d0c7 100%);
+}
+
+.thumb-three {
+  background: linear-gradient(135deg, #c4622d 0%, #d99e73 100%);
+}
+
+.purchase-panel {
+  padding-top: 4px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--kiln-orange);
+}
+
+h1 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.6rem, 4vw, 4rem);
+  letter-spacing: -0.07em;
+  line-height: 1;
+}
+
+.seller-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.seller-avatar {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(31, 42, 55, 0.08);
+  color: var(--ink-slate);
+  font-weight: 600;
+}
+
+.seller-name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.rating-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--graphite);
+}
+
+.star {
+  color: var(--kiln-orange);
+}
+
+.count {
+  color: var(--graphite);
+}
+
+.price-block {
+  margin-top: 26px;
+}
+
+.price {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  font-size: clamp(2.1rem, 3vw, 2.9rem);
+}
+
+.license-block {
+  margin-top: 26px;
+}
+
+.label {
+  margin: 0 0 12px;
+  color: var(--graphite);
+  font-weight: 600;
+}
+
+.license-options {
+  display: grid;
+  gap: 12px;
+}
+
+.license-option {
+  position: relative;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.38);
+  padding: 14px 14px;
+  cursor: pointer;
+}
+
+.license-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.license-option span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.license-option strong {
+  font-size: 1rem;
+}
+
+.license-option small {
+  color: var(--graphite);
+  font-size: 0.85rem;
+}
+
+.license-option.selected {
+  border-color: rgba(31, 42, 55, 0.22);
+  background: rgba(31, 42, 55, 0.04);
+}
+
+.primary-button {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 24px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--ink-slate);
+  color: var(--white);
+  font-weight: 600;
+  box-shadow: 0 10px 18px rgba(31, 42, 55, 0.14);
+}
+
+.summary-panel {
+  padding-top: 8px;
+}
+
+.summary-card {
+  background: rgba(255, 255, 255, 0.44);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.summary-card h2 {
+  margin: 0 0 18px;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.06em;
+  font-size: 1.7rem;
+}
+
+.line-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--graphite);
+}
+
+.subtotal,
+.total-row {
+  color: var(--ink-slate);
+  font-weight: 600;
+}
+
+.total-row {
+  border-bottom: 0;
+  padding-top: 14px;
+}
+
+.muted-row {
+  color: var(--graphite);
+}
+
+.description-section {
+  margin-top: 44px;
+}
+
+.description-wrap {
+  max-width: 760px;
+}
+
+.description-wrap p {
+  margin: 0;
+  color: var(--graphite);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 980px) {
+  .product-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-panel {
+    order: 3;
+  }
+
+  .feature-image {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 28px, 1200px);
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+}

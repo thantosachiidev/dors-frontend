@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dors — Button component</title>
+    <meta name="description" content="Dors button component states and variants." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="buttons.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Dors home">
+        <img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" />
+        <span>Dors</span>
+      </a>
+      <span class="header-label">Component / Button</span>
+    </header>
+
+    <main class="component-page">
+      <section class="page-intro">
+        <p class="eyebrow">Action language</p>
+        <h1>Buttons with<br /><em>good manners.</em></h1>
+        <p>Clear hierarchy, steady feedback, and enough room to make every action feel deliberate.</p>
+      </section>
+
+      <section class="specimen" aria-labelledby="variants-title">
+        <div class="section-heading">
+          <p class="eyebrow">01 / Variants</p>
+          <h2 id="variants-title">The everyday set</h2>
+        </div>
+        <div class="button-row">
+          <div class="button-example"><button class="button button-primary" type="button">Primary action</button><span>Primary</span></div>
+          <div class="button-example"><button class="button button-secondary" type="button">Secondary action</button><span>Secondary</span></div>
+          <div class="button-example"><button class="button button-danger" type="button">Delete product</button><span>Danger</span></div>
+        </div>
+      </section>
+
+      <section class="specimen" aria-labelledby="states-title">
+        <div class="section-heading">
+          <p class="eyebrow">02 / States</p>
+          <h2 id="states-title">Same action, clear feedback</h2>
+        </div>
+        <div class="button-row">
+          <div class="button-example"><button class="button button-primary" type="button" disabled>Unavailable</button><span>Disabled</span></div>
+          <div class="button-example"><button class="button button-primary button-loading" type="button" aria-busy="true"><span class="spinner" aria-hidden="true"></span>Saving changes</button><span>Loading</span></div>
+          <div class="button-example focus-example"><button class="button button-secondary" type="button">Keyboard focus</button><span>Focus-visible</span></div>
+        </div>
+      </section>
+
+      <section class="specification" aria-labelledby="spec-title">
+        <div class="section-heading">
+          <p class="eyebrow">03 / Specification</p>
+          <h2 id="spec-title">Small rules, consistently applied</h2>
+        </div>
+        <dl class="token-list">
+          <div><dt>Padding</dt><dd>12px 18px</dd></div>
+          <div><dt>Minimum height</dt><dd>44px</dd></div>
+          <div><dt>Border radius</dt><dd>8px</dd></div>
+          <div><dt>Font</dt><dd>IBM Plex Sans / 600</dd></div>
+          <div><dt>Hover</dt><dd>Translate Y(-1px), deepen fill, 180ms ease</dd></div>
+          <div><dt>Focus</dt><dd>2px kiln-orange outline, 3px offset</dd></div>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>Dors / Interface system</span><a href="index.html">Back to Dors <span aria-hidden="true">↗</span></a></footer>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dors — Site Builder</title>
+    <meta name="description" content="Minimal website builder editor shell for Dors." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="builder.css" />
+  </head>
+  <body>
+    <div class="builder-app">
+      <header class="topbar">
+        <div class="topbar-left">
+          <div class="brand-row">
+            <img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" class="brand-mark" />
+            <span class="brand-name">Dors</span>
+          </div>
+          <div class="page-meta">
+            <span class="page-label">Portfolio site</span>
+            <span class="page-name">North Studio</span>
+          </div>
+        </div>
+
+        <div class="topbar-center">
+          <button id="undo-button" class="icon-button" type="button" aria-label="Undo last change">Undo</button>
+          <button id="redo-button" class="icon-button" type="button" aria-label="Redo last undone change">Redo</button>
+          <span id="save-status" class="save-status" role="status" aria-live="polite">Unsaved changes</span>
+        </div>
+
+        <div class="topbar-right">
+          <button id="preview-button" class="ghost-button" type="button">Preview</button>
+          <button id="save-button" class="ghost-button" type="button">Save</button>
+          <button id="publish-button" class="primary-button" type="button">Publish</button>
+        </div>
+      </header>
+
+      <div class="workspace">
+        <aside class="panel panel-left" aria-label="Components panel">
+          <div class="panel-header">
+            <p>Components</p>
+          </div>
+
+          <div class="component-list">
+            <div class="component-item" draggable="true" data-component-type="header">
+              <span class="component-icon">H</span>
+              <span>Header</span>
+            </div>
+            <div class="component-item" draggable="true" data-component-type="text">
+              <span class="component-icon">T</span>
+              <span>Text</span>
+            </div>
+            <div class="component-item" draggable="true" data-component-type="image">
+              <span class="component-icon">I</span>
+              <span>Image</span>
+            </div>
+            <div class="component-item" draggable="true" data-component-type="gallery">
+              <span class="component-icon">G</span>
+              <span>Gallery</span>
+            </div>
+            <div class="component-item" draggable="true" data-component-type="callout">
+              <span class="component-icon">C</span>
+              <span>Callout</span>
+            </div>
+          </div>
+        </aside>
+
+        <main class="canvas-shell" aria-label="Live canvas">
+          <div class="canvas-toolbar">
+            <span class="canvas-tag">Desktop view</span>
+            <div class="canvas-actions">
+              <span class="mini-dot"></span>
+              <span class="mini-dot muted"></span>
+              <span class="mini-dot muted"></span>
+            </div>
+          </div>
+
+          <div class="canvas-frame">
+            <div id="canvas-root" class="page-viewport" aria-label="Builder canvas"></div>
+          </div>
+        </main>
+
+        <aside id="properties-panel" class="panel panel-right" aria-label="Properties panel"></aside>
+      </div>
+
+      <div id="publish-toast" class="publish-toast" role="status" aria-live="polite"></div>
+    </div>
+
+    <script src="builder.js"></script>
+  </body>
+</html>

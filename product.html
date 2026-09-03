@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dors — Product detail</title>
+    <meta
+      name="description"
+      content="Review a marketplace item, choose a license, and purchase with confidence."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="product.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="brand" aria-label="Dors home">
+          <img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" class="brand-mark" />
+          <span>Dors</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="marketplace.html" class="active">Marketplace</a>
+          <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="signin.html" class="nav-link">Sign in</a>
+          <a href="signup.html" class="button button-primary">Create account</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="product-page">
+      <div class="container product-shell">
+        <section class="gallery-panel" aria-label="Product gallery">
+          <div class="feature-image"></div>
+          <div class="thumb-row">
+            <div class="mini-thumb thumb-one"></div>
+            <div class="mini-thumb thumb-two"></div>
+            <div class="mini-thumb thumb-three"></div>
+          </div>
+        </section>
+
+        <section class="purchase-panel" aria-label="Purchase details">
+          <p class="eyebrow">Portfolio kit</p>
+          <h1>Portfolio Kit</h1>
+
+          <div class="seller-row">
+            <div class="seller-avatar">AF</div>
+            <div>
+              <p class="seller-name">Arlo Finch</p>
+              <div class="rating-row">
+                <span class="star">★</span>
+                <span>4.9</span>
+                <span class="count">(236 sales)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="price-block">
+            <span class="price">$49</span>
+          </div>
+
+          <div class="license-block" aria-label="License selection">
+            <p class="label">License type</p>
+            <div class="license-options">
+              <label class="license-option selected">
+                <input type="radio" name="license" checked />
+                <span>
+                  <strong>Personal</strong>
+                  <small>$49</small>
+                </span>
+              </label>
+              <label class="license-option">
+                <input type="radio" name="license" />
+                <span>
+                  <strong>Commercial</strong>
+                  <small>$129</small>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <button class="primary-button" type="button">Buy now</button>
+        </section>
+
+        <aside class="summary-panel" aria-label="Checkout summary">
+          <div class="summary-card">
+            <h2>Checkout summary</h2>
+            <div class="line-item">
+              <span>Portfolio Kit</span>
+              <span>$49</span>
+            </div>
+            <div class="line-item">
+              <span>License</span>
+              <span>Personal</span>
+            </div>
+            <div class="line-item subtotal">
+              <span>Subtotal</span>
+              <span>$49</span>
+            </div>
+            <div class="line-item muted-row">
+              <span>Delivery</span>
+              <span>Instant</span>
+            </div>
+            <div class="line-item total-row">
+              <span>Total</span>
+              <span>$49</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="description-section">
+        <div class="container description-wrap">
+          <div class="description-header">
+            <p class="eyebrow">Description</p>
+          </div>
+          <p>
+            A clean, flexible kit for building a portfolio that feels considered and credible.
+            Includes modular sections, typography guidance, and polished layout blocks for case studies,
+            product highlights, and personal brand storytelling. Built to work across portfolio sites,
+            student projects, and personal branding work without feeling generic.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dors — Portfolio builder and marketplace</title>
+    <link rel="icon" type="image/png" href="dors-high-resolution-logo-grayscale-transparent.png" />
+    <meta
+      name="description"
+      content="Dors helps creators build trustworthy portfolios and sell templates, projects, and services from a single platform."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="brand" aria-label="Dors home">
+          <img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" class="brand-mark" />
+          <span>Dors</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#marketplace">Marketplace</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="signin.html" class="nav-link">Log in</a>
+          <a href="signup.html" class="button button-primary">Start free</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Portfolio builder + marketplace</p>
+            <h1>Build a portfolio people trust, and sell the work behind it.</h1>
+            <p class="subhead">
+              Dors helps designers, freelancers, students, and professionals show
+              their work clearly and turn it into a real business — without piecing
+              together a dozen tools.
+            </p>
+
+            <div class="hero-actions">
+              <a href="signup.html" class="button button-primary">Create portfolio</a>
+              <a href="#marketplace" class="button button-secondary">Browse templates</a>
+            </div>
+
+            <ul class="proof-list" aria-label="Key benefits">
+              <li>Portfolio pages that feel like your work</li>
+              <li>Built-in sales for templates and services</li>
+              <li>Real tools for real work</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Product preview">
+            <div class="window-card">
+              <div class="window-topbar">
+                <span class="dot dot-orange"></span>
+                <span class="dot dot-slate"></span>
+                <span class="dot dot-moss"></span>
+              </div>
+
+              <div class="dashboard-preview">
+                <aside class="sidebar-preview">
+                  <div class="mini-label">Portfolio</div>
+                  <ul>
+                    <li class="active">Overview</li>
+                    <li>Projects</li>
+                    <li>Marketplace</li>
+                    <li>Invoices</li>
+                  </ul>
+                </aside>
+
+                <div class="content-preview">
+                  <div class="preview-header">
+                    <div>
+                      <div class="mini-label muted">Published</div>
+                      <h2>Case studies</h2>
+                    </div>
+                    <button class="chip">Publish</button>
+                  </div>
+
+                  <div class="project-cards">
+                    <article class="project-card featured">
+                      <div class="thumb thumb-dark"></div>
+                      <div class="meta-row">
+                        <span>Brand identity</span>
+                        <span class="price">$180</span>
+                      </div>
+                    </article>
+                    <article class="project-card">
+                      <div class="thumb thumb-light"></div>
+                      <div class="meta-row">
+                        <span>UX system</span>
+                        <span class="price">$240</span>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="logos-strip">
+        <div class="container strip-inner">
+          <p>Built for professionals, creatives, and people just getting started.</p>
+          <div class="logo-row" aria-label="Audience examples">
+            <span>Doctors</span>
+            <span>Designers</span>
+            <span>Students</span>
+            <span>Engineers</span>
+            <span>Teachers</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features section-block">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Why Dors</p>
+            <h2>Everything you need to present your work and sell it.</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="icon-wrap icon-slate">01</div>
+              <h3>Portfolio pages that read clearly</h3>
+              <p>
+                Choose a layout that fits your work, then customize it without fighting
+                templates. Add case studies, process notes, services, and testimonials in
+                a format that feels credible and easy to scan.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="icon-wrap icon-orange">02</div>
+              <h3>Sell templates and services without friction</h3>
+              <p>
+                Publish digital products, design kits, or service packages directly from
+                your portfolio. Buyers pay, get access, and your work stays organized in one place.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="icon-wrap icon-moss">03</div>
+              <h3>One place for updates, orders, and proof</h3>
+              <p>
+                Keep projects, sales, and portfolio updates in the same dashboard. You can
+                publish new work, track what’s selling, and keep your reputation current without extra admin.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="marketplace" class="marketplace section-block dark-panel">
+        <div class="container marketplace-grid">
+          <div class="marketplace-copy">
+            <p class="eyebrow accent">Marketplace built for trust</p>
+            <h2>Sell the work behind the portfolio.</h2>
+            <p>
+              Whether you sell a logo pack, a portfolio template, a UX toolkit, or a
+              writing sample package, Dors gives your work context. Buyers see the work,
+              understand the value, and can purchase without leaving the experience.
+            </p>
+            <ul class="check-list">
+              <li>Simple storefronts for digital products</li>
+              <li>High-trust product pages with real examples</li>
+              <li>Clear checkout and instant delivery</li>
+            </ul>
+          </div>
+
+          <div class="marketplace-panel">
+            <div class="product-card">
+              <div class="badge">Featured</div>
+              <div class="product-thumb"></div>
+              <div class="product-info">
+                <div>
+                  <p class="mini-label muted">Template pack</p>
+                  <h3>Portfolio Kit</h3>
+                </div>
+                <div class="product-meta">
+                  <span>16 files</span>
+                  <strong>$49</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing section-block">
+        <div class="container">
+          <div class="section-heading center">
+            <p class="eyebrow">Pricing</p>
+            <h2>Simple plans that scale with your work.</h2>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="price-card">
+              <p class="plan-name">Starter</p>
+              <div class="price-line">
+                <span class="currency">$</span>
+                <span class="amount">0</span>
+                <span class="period">/month</span>
+              </div>
+              <p class="plan-copy">For a first portfolio or a side project.</p>
+              <ul>
+                <li>1 portfolio</li>
+                <li>Up to 5 projects</li>
+                <li>Basic template library</li>
+                <li>Community support</li>
+              </ul>
+              <a href="signup.html" class="button button-secondary wide">Get started</a>
+            </article>
+
+            <article class="price-card featured-plan">
+              <div class="plan-badge">Most popular</div>
+              <p class="plan-name">Pro</p>
+              <div class="price-line">
+                <span class="currency">$</span>
+                <span class="amount">19</span>
+                <span class="period">/month</span>
+              </div>
+              <p class="plan-copy">For freelancers, creators, and growing portfolios.</p>
+              <ul>
+                <li>Unlimited portfolio pages</li>
+                <li>Custom domains</li>
+                <li>Marketplace storefront</li>
+                <li>Sales reporting</li>
+              </ul>
+              <a href="signup.html" class="button button-primary wide">Start Pro</a>
+            </article>
+
+            <article class="price-card">
+              <p class="plan-name">Studio</p>
+              <div class="price-line">
+                <span class="currency">$</span>
+                <span class="amount">49</span>
+                <span class="period">/month</span>
+              </div>
+              <p class="plan-copy">For teams selling products and managing multiple clients.</p>
+              <ul>
+                <li>Shared team workspace</li>
+                <li>Client project permissions</li>
+                <li>Priority support</li>
+                <li>Advanced marketplace tools</li>
+              </ul>
+              <a href="signup.html" class="button button-secondary wide">Talk to sales</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="faq section-block">
+        <div class="container faq-wrap">
+          <div class="section-heading left">
+            <p class="eyebrow">FAQ</p>
+            <h2>Questions people ask before they publish.</h2>
+          </div>
+
+          <div class="faq-list" aria-label="Frequently asked questions">
+            <details open>
+              <summary>Can I build a portfolio without selling anything?</summary>
+              <p>
+                Yes. Dors works just as well for a clean personal portfolio, a case-study
+                site, or a professional profile page. The marketplace is optional.
+              </p>
+            </details>
+
+            <details>
+              <summary>Do I need a separate storefront for templates?</summary>
+              <p>
+                No. You can publish product listings, collect payments, and deliver files from the same dashboard you use for your portfolio.
+              </p>
+            </details>
+
+            <details>
+              <summary>What kind of work is this good for?</summary>
+              <p>
+                Dors is built for portfolios and products across design, writing, engineering,
+                education, consulting, and creative services — anywhere work needs context and trust.
+              </p>
+            </details>
+
+            <details>
+              <summary>Can I switch from a simple site to a full marketplace later?</summary>
+              <p>
+                Yes. Start with a portfolio and upgrade when you’re ready to sell templates,
+                services, or packaged work. Your content stays in place as you grow.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" class="brand-mark" />
+          <span>Dors</span>
+        </div>
+        <p>Portfolio builder and marketplace for real work.</p>
+        <a href="signup.html" class="button button-primary">Start free</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

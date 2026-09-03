@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dors — Card component</title>
+    <meta name="description" content="Dors flexible card component for sites, products, and templates." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cards.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Dors home"><img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" /><span>Dors</span></a>
+      <span class="header-label">Component / Card</span>
+    </header>
+
+    <main class="component-page">
+      <section class="page-intro">
+        <p class="eyebrow">One structure / three jobs</p>
+        <h1>A card that<br /><em>knows its place.</em></h1>
+        <p>Keep the object familiar while the useful details change: a site, a product, or a place to begin.</p>
+      </section>
+
+      <section class="specimen" aria-labelledby="examples-title">
+        <div class="section-heading">
+          <p class="eyebrow">01 / Examples</p>
+          <h2 id="examples-title">The same anatomy, in context</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="dors-card site-card">
+            <div class="card-media media-site"><span class="media-label">Portfolio</span><span class="media-mark">NS</span></div>
+            <div class="card-body">
+              <div class="card-title-row"><h3>North Studio</h3><span class="status status-published">Published</span></div>
+              <p class="card-subtitle">A portfolio site for a small design practice</p>
+              <div class="card-meta"><span>Last edited 2 days ago</span><span class="meta-arrow" aria-hidden="true">↗</span></div>
+            </div>
+          </article>
+
+          <article class="dors-card product-card">
+            <div class="card-media media-product"><span class="media-label">Marketplace</span><span class="media-mark">PK</span></div>
+            <div class="card-body">
+              <div class="card-title-row"><h3>Portfolio Kit</h3><strong class="price">$49</strong></div>
+              <p class="card-subtitle">by Arlo Finch</p>
+              <div class="card-meta"><span class="rating"><b aria-hidden="true">★</b> 4.9 <small>(236)</small></span><span class="meta-arrow" aria-hidden="true">↗</span></div>
+            </div>
+          </article>
+
+          <article class="dors-card template-card">
+            <div class="card-media media-template"><span class="media-label">Starter template</span><span class="media-mark">ED</span></div>
+            <div class="card-body">
+              <div class="card-title-row"><h3>Editorial</h3></div>
+              <p class="card-subtitle">A considered home for case studies and notes</p>
+              <div class="card-meta"><span>Start with this template</span><span class="meta-arrow" aria-hidden="true">↗</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="anatomy" aria-labelledby="anatomy-title">
+        <div class="section-heading"><p class="eyebrow">02 / Anatomy</p><h2 id="anatomy-title">Stable where it matters</h2></div>
+        <div class="anatomy-list">
+          <div><span class="anatomy-index">01</span><strong>Media</strong><p>Fixed 16:10 thumbnail keeps the grid calm.</p></div>
+          <div><span class="anatomy-index">02</span><strong>Title row</strong><p>Name stays left; status or price stays right.</p></div>
+          <div><span class="anatomy-index">03</span><strong>Subtitle</strong><p>One supporting line gives the object context.</p></div>
+          <div><span class="anatomy-index">04</span><strong>Metadata</strong><p>A small, useful detail closes the card.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>Dors / Interface system</span><a href="index.html">Back to Dors <span aria-hidden="true">↗</span></a></footer>
+  </body>
+</html>

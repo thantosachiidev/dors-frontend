@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dors — Marketplace</title>
+    <meta
+      name="description"
+      content="Browse templates, design assets, and portfolio resources in the Dors marketplace."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="marketplace.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="brand" aria-label="Dors home">
+          <img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" class="brand-mark" />
+          <span>Dors</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="marketplace.html" class="active">Marketplace</a>
+          <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="signin.html" class="nav-link">Sign in</a>
+          <a href="signup.html" class="button button-primary">Create account</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="marketplace-page">
+      <div class="container page-shell">
+        <section class="toolbar">
+          <div class="search-wrap">
+            <label class="sr-only" for="market-search">Search marketplace</label>
+            <input id="market-search" type="search" placeholder="Search templates, logos, and more" />
+          </div>
+
+          <div class="category-row" aria-label="Category filters">
+            <button class="chip chip-active" type="button">All</button>
+            <button class="chip" type="button">Portfolio</button>
+            <button class="chip" type="button">Brand</button>
+            <button class="chip" type="button">UX</button>
+            <button class="chip" type="button">Writing</button>
+            <button class="chip" type="button">Illustration</button>
+          </div>
+        </section>
+
+        <section class="results-header">
+          <div>
+            <p class="eyebrow">Marketplace</p>
+            <h1>Browse work that’s ready to use.</h1>
+          </div>
+          <p class="results-count">128 products</p>
+        </section>
+
+        <section class="product-grid" aria-label="Marketplace product grid">
+          <article class="product-card card-featured">
+            <div class="thumb thumb-dark"></div>
+            <div class="card-copy">
+              <div class="title-row">
+                <h2>Portfolio Kit</h2>
+                <span class="price">$49</span>
+              </div>
+              <p class="seller">by Arlo Finch</p>
+              <div class="rating-row">
+                <span class="star">★</span>
+                <span>4.9</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="thumb thumb-ivory"></div>
+            <div class="card-copy">
+              <div class="title-row">
+                <h2>Brand System</h2>
+                <span class="price">$69</span>
+              </div>
+              <p class="seller">by Mira Sol</p>
+              <div class="rating-row">
+                <span class="star">★</span>
+                <span>4.8</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="thumb thumb-moss"></div>
+            <div class="card-copy">
+              <div class="title-row">
+                <h2>UX Research Pack</h2>
+                <span class="price">$92</span>
+              </div>
+              <p class="seller">by Theo Lane</p>
+              <div class="rating-row">
+                <span class="star">★</span>
+                <span>4.7</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="thumb thumb-clay"></div>
+            <div class="card-copy">
+              <div class="title-row">
+                <h2>Package of Notes</h2>
+                <span class="price">$24</span>
+              </div>
+              <p class="seller">by Naomi Reed</p>
+              <div class="rating-row">
+                <span class="star">★</span>
+                <span>4.9</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="thumb thumb-slate"></div>
+            <div class="card-copy">
+              <div class="title-row">
+                <h2>Case Study Template</h2>
+                <span class="price">$39</span>
+              </div>
+              <p class="seller">by Lark Quinn</p>
+              <div class="rating-row">
+                <span class="star">★</span>
+                <span>4.6</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="thumb thumb-sand"></div>
+            <div class="card-copy">
+              <div class="title-row">
+                <h2>Studio Assets</h2>
+                <span class="price">$84</span>
+              </div>
+              <p class="seller">by Ezra Hale</p>
+              <div class="rating-row">
+                <span class="star">★</span>
+                <span>4.8</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <nav class="pagination" aria-label="Pagination">
+          <button class="page-button" type="button">Previous</button>
+          <div class="page-numbers">
+            <button class="page-number active" type="button">1</button>
+            <button class="page-number" type="button">2</button>
+            <button class="page-number" type="button">3</button>
+          </div>
+          <button class="page-button" type="button">Next</button>
+        </nav>
+      </div>
+    </main>
+    <script src="auth-nav.js"></script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dors — Get started</title>
+    <link rel="icon" type="image/png" href="dors-high-resolution-logo-grayscale-transparent.png" />
+    <meta name="description" content="Set up your Dors account in three simple steps." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="onboarding.css" />
+  </head>
+  <body>
+    <div class="onboarding-shell">
+      <aside class="brand-panel" aria-label="Dors introduction">
+        <div class="brand-block">
+          <a class="brand-row" href="index.html" aria-label="Dors home">
+            <img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" class="brand-mark" />
+            <span class="brand-name">Dors</span>
+          </a>
+          <p class="tagline">Make a place for your work to live.</p>
+          <div class="setup-note">
+            <span class="note-index">01</span>
+            <p>A thoughtful starting point makes everything else easier.</p>
+          </div>
+        </div>
+      </aside>
+
+      <main class="setup-panel">
+        <div class="setup-card">
+          <div class="setup-topline">
+            <span id="step-counter">Step 1 of 3</span>
+            <a href="signin.html" class="text-link">Already have an account?</a>
+          </div>
+
+          <div class="progress-track" aria-label="Onboarding progress">
+            <span class="progress-fill" id="progress-fill"></span>
+          </div>
+
+          <form id="onboarding-form">
+            <section class="step-panel active" data-step="1" aria-labelledby="step-one-title">
+              <p class="eyebrow">Welcome to Dors</p>
+              <h1 id="step-one-title">How will you use Dors?</h1>
+              <p class="step-intro">Choose the path that fits you now. You can change this later.</p>
+
+              <div class="choice-grid" role="radiogroup" aria-label="Account type">
+                <label class="choice-card">
+                  <input type="radio" name="accountType" value="creator" checked />
+                  <span class="choice-icon">CR</span>
+                  <strong>Creator</strong>
+                  <small>Build and sell your work.</small>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="accountType" value="buyer" />
+                  <span class="choice-icon">BY</span>
+                  <strong>Buyer</strong>
+                  <small>Discover tools and resources.</small>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="accountType" value="both" />
+                  <span class="choice-icon">BO</span>
+                  <strong>Both</strong>
+                  <small>Create, share, and collect.</small>
+                </label>
+              </div>
+            </section>
+
+            <section class="step-panel" data-step="2" aria-labelledby="step-two-title" hidden>
+              <p class="eyebrow">A little about you</p>
+              <h1 id="step-two-title">Set up your profile.</h1>
+              <p class="step-intro">This is how people will recognize you around Dors.</p>
+
+              <div class="field-stack">
+                <div>
+                  <label class="field-label" for="display-name">Display name</label>
+                  <input id="display-name" name="displayName" type="text" placeholder="Your name" autocomplete="name" />
+                </div>
+                <div>
+                  <label class="field-label" for="username">Username</label>
+                  <div class="input-prefix">
+                    <span>@</span>
+                    <input id="username" name="username" type="text" placeholder="yourname" autocomplete="username" />
+                  </div>
+                  <p class="field-hint">Your public Dors profile will live at dors.co/<span>yourname</span></p>
+                </div>
+              </div>
+            </section>
+
+            <section class="step-panel" data-step="3" aria-labelledby="step-three-title" hidden>
+              <p class="eyebrow">A head start</p>
+              <h1 id="step-three-title">Pick a starting template.</h1>
+              <p class="step-intro">Begin with a strong foundation. You can make it yours in the builder.</p>
+
+              <div class="template-grid" role="radiogroup" aria-label="Starting template">
+                <label class="template-card">
+                  <input type="radio" name="template" value="editorial" checked />
+                  <span class="template-preview editorial-preview"><i></i><i></i><i></i></span>
+                  <strong>Editorial</strong>
+                  <small>For considered case studies.</small>
+                </label>
+                <label class="template-card">
+                  <input type="radio" name="template" value="studio" />
+                  <span class="template-preview studio-preview"><i></i><i></i><i></i></span>
+                  <strong>Studio</strong>
+                  <small>For bold visual work.</small>
+                </label>
+                <label class="template-card">
+                  <input type="radio" name="template" value="minimal" />
+                  <span class="template-preview minimal-preview"><i></i><i></i><i></i></span>
+                  <strong>Minimal</strong>
+                  <small>For a quiet, focused profile.</small>
+                </label>
+              </div>
+            </section>
+
+            <div class="form-actions">
+              <button class="back-button" id="back-button" type="button" hidden>Back</button>
+              <button class="primary-button" id="next-button" type="button">Continue</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+    <script src="onboarding.js"></script>
+  </body>
+</html>

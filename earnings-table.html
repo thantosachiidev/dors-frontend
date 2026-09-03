@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dors — Earnings table</title>
+    <meta name="description" content="Dors seller earnings data table row style." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="earnings-table.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Dors home"><img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" /><span>Dors</span></a>
+      <span class="header-label">Component / Data table</span>
+    </header>
+
+    <main class="component-page">
+      <section class="page-intro">
+        <p class="eyebrow">Seller workspace</p>
+        <h1>Numbers worth<br /><em>looking at.</em></h1>
+        <p>A compact earnings view that lets the eye compare products, money, and timing without fighting a wall of borders.</p>
+      </section>
+
+      <section class="table-section" aria-labelledby="table-title">
+        <div class="section-heading"><div><p class="eyebrow">Earnings / June 2024</p><h2 id="table-title">Recent sales</h2></div><span class="date-filter">Last 30 days <span aria-hidden="true">⌄</span></span></div>
+        <div class="earnings-table" role="table" aria-label="Recent product sales">
+          <div class="table-header" role="row"><span role="columnheader">Product</span><span role="columnheader">Sales</span><span role="columnheader">Revenue</span><span role="columnheader">Date</span></div>
+          <div class="table-row" role="row"><div class="product-cell" role="cell"><span class="product-thumb thumb-dark">PK</span><span><strong>Portfolio Kit</strong><small>Digital product</small></span></div><div class="metric-cell" role="cell" data-label="Sales"><strong>128</strong><span class="trend">+18%</span></div><div class="metric-cell revenue-cell" role="cell" data-label="Revenue"><strong>$3,220.00</strong></div><div class="date-cell" role="cell" data-label="Date">Jun 08, 2024</div></div>
+          <div class="table-row" role="row"><div class="product-cell" role="cell"><span class="product-thumb thumb-orange">BN</span><span><strong>Brand Notes Pack</strong><small>Digital product</small></span></div><div class="metric-cell" role="cell" data-label="Sales"><strong>41</strong><span class="trend">+9%</span></div><div class="metric-cell revenue-cell" role="cell" data-label="Revenue"><strong>$1,080.00</strong></div><div class="date-cell" role="cell" data-label="Date">Jun 06, 2024</div></div>
+          <div class="table-row" role="row"><div class="product-cell" role="cell"><span class="product-thumb thumb-moss">CS</span><span><strong>Case Study Template</strong><small>Digital product</small></span></div><div class="metric-cell" role="cell" data-label="Sales"><strong>17</strong><span class="trend">+4%</span></div><div class="metric-cell revenue-cell" role="cell" data-label="Revenue"><strong>$520.00</strong></div><div class="date-cell" role="cell" data-label="Date">Jun 03, 2024</div></div>
+          <div class="table-row" role="row"><div class="product-cell" role="cell"><span class="product-thumb thumb-ivory">SA</span><span><strong>Studio Assets</strong><small>Digital product</small></span></div><div class="metric-cell" role="cell" data-label="Sales"><strong>9</strong><span class="trend neutral">New</span></div><div class="metric-cell revenue-cell" role="cell" data-label="Revenue"><strong>$288.00</strong></div><div class="date-cell" role="cell" data-label="Date">May 29, 2024</div></div>
+          <div class="table-footer"><span>Showing 4 of 12 products</span><a href="dashboard.html">View all earnings <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+
+      <section class="rules" aria-labelledby="rules-title"><div class="section-heading"><p class="eyebrow">Details</p><h2 id="rules-title">Built for quick comparison</h2></div><div class="rule-grid"><div><strong>Align the money</strong><p>Sales, revenue, and dates share clear tracks so values scan vertically.</p></div><div><strong>Let rows breathe</strong><p>One subtle separator creates rhythm without turning every record into a box.</p></div><div><strong>Keep context close</strong><p>Product type and a small trend signal sit beside the number they explain.</p></div></div></section>
+    </main>
+    <footer class="site-footer"><span>Dors / Interface system</span><a href="index.html">Back to Dors <span aria-hidden="true">↗</span></a></footer>
+    <script src="auth-nav.js"></script>
+  </body>
+</html>

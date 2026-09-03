@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dors — Dashboard</title>
+    <link rel="icon" type="image/png" href="dors-high-resolution-logo-grayscale-transparent.png" />
+    <meta
+      name="description"
+      content="Manage your portfolio sites, marketplace listings, earnings, and settings in Dors."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Sidebar navigation">
+        <div class="brand-row">
+          <img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" class="brand-mark" />
+          <span class="brand-name">Dors</span>
+        </div>
+
+        <nav class="side-nav" aria-label="Main navigation">
+          <a href="dashboard.html" class="nav-item active">
+            <span class="nav-icon">S</span>
+            <span>Sites</span>
+          </a>
+          <a href="marketplace.html" class="nav-item">
+            <span class="nav-icon">M</span>
+            <span>Marketplace</span>
+          </a>
+          <a href="earnings-table.html" class="nav-item">
+            <span class="nav-icon">E</span>
+            <span>Earnings</span>
+          </a>
+          <a href="settings.html" class="nav-item">
+            <span class="nav-icon">G</span>
+            <span>Settings</span>
+          </a>
+        </nav>
+
+        <div class="user-card">
+          <details class="user-menu">
+            <summary>
+              <div class="user-avatar" id="user-avatar">U</div>
+              <div>
+                <p class="user-name" id="user-name">Account</p>
+                <p class="user-role" id="user-role">Buyer</p>
+              </div>
+              <span class="user-chevron" aria-hidden="true">&#9662;</span>
+            </summary>
+            <div class="user-dropdown">
+              <a href="index.html#/settings">Account settings</a>
+              <button id="logout-button" type="button">Log out</button>
+            </div>
+          </details>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Seller dashboard</p>
+            <h1>Earnings</h1>
+          </div>
+
+          <button class="primary-button" type="button">Upload new product</button>
+        </header>
+
+        <section class="stats-row" aria-label="Performance summary">
+          <article class="stat-card accent">
+            <p class="stat-label">Total earnings this month</p>
+            <div class="stat-value-wrap">
+              <span class="stat-value">$4,820</span>
+              <span class="trend positive">+18.4%</span>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <p class="stat-label">Product sales</p>
+            <div class="stat-value-wrap">
+              <span class="stat-value">186</span>
+              <span class="trend positive">+24</span>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <p class="stat-label">Active listings</p>
+            <div class="stat-value-wrap">
+              <span class="stat-value">12</span>
+              <span class="trend neutral">2 new</span>
+            </div>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel chart-panel" aria-label="Earnings chart">
+            <div class="panel-header">
+              <div>
+                <p class="panel-label">Revenue</p>
+                <h2>Performance</h2>
+              </div>
+              <span class="period-tag">This month</span>
+            </div>
+
+            <svg class="earnings-chart" viewBox="0 0 520 240" role="img" aria-label="Earnings chart for this month">
+              <g class="grid-lines">
+                <line x1="40" y1="30" x2="490" y2="30" />
+                <line x1="40" y1="80" x2="490" y2="80" />
+                <line x1="40" y1="130" x2="490" y2="130" />
+                <line x1="40" y1="180" x2="490" y2="180" />
+              </g>
+
+              <g class="axis-labels">
+                <text x="40" y="218">1</text>
+                <text x="122" y="218">5</text>
+                <text x="204" y="218">10</text>
+                <text x="286" y="218">15</text>
+                <text x="368" y="218">20</text>
+                <text x="450" y="218">25</text>
+              </g>
+
+              <path class="area-fill" d="M40 170 C90 140, 120 110, 150 124 S220 90, 260 92 S330 60, 360 72 S420 42, 490 48 L490 210 L40 210 Z" />
+              <path class="line-path" d="M40 170 C90 140, 120 110, 150 124 S220 90, 260 92 S330 60, 360 72 S420 42, 490 48" />
+
+              <g class="data-points">
+                <circle cx="40" cy="170" r="5" />
+                <circle cx="150" cy="124" r="5" />
+                <circle cx="260" cy="92" r="5" />
+                <circle cx="360" cy="72" r="5" />
+                <circle cx="490" cy="48" r="5" />
+              </g>
+            </svg>
+          </article>
+
+          <aside class="panel payout-panel" aria-label="Payout status">
+            <div class="panel-header compact">
+              <p class="panel-label">Payout status</p>
+            </div>
+
+            <div class="payout-card">
+              <div class="stripe-badge" aria-label="Stripe Connect">SC</div>
+              <div>
+                <p class="payout-title">Stripe Connect</p>
+                <p class="payout-meta">Connected and active</p>
+              </div>
+            </div>
+
+            <ul class="payout-list">
+              <li>
+                <span>Pending balance</span>
+                <strong>$1,260</strong>
+              </li>
+              <li>
+                <span>Next transfer</span>
+                <strong>Jun 10</strong>
+              </li>
+              <li>
+                <span>Account status</span>
+                <strong class="ok">Verified</strong>
+              </li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="products-panel panel" aria-label="Products sales list">
+          <div class="panel-header">
+            <div>
+              <p class="panel-label">Inventory</p>
+              <h2>Products</h2>
+            </div>
+            <button class="secondary-button" type="button">Upload new product</button>
+          </div>
+
+          <div class="product-list" role="list">
+            <article class="product-row" role="listitem">
+              <div class="product-info">
+                <div class="product-thumb dark"></div>
+                <div>
+                  <h3>Portfolio Kit</h3>
+                  <p>Creative starter collection</p>
+                </div>
+              </div>
+
+              <div class="product-metrics">
+                <span class="metric-label">Sales</span>
+                <strong>128</strong>
+              </div>
+
+              <div class="product-metrics">
+                <span class="metric-label">Revenue</span>
+                <strong>$3,220</strong>
+              </div>
+            </article>
+
+            <article class="product-row" role="listitem">
+              <div class="product-info">
+                <div class="product-thumb light"></div>
+                <div>
+                  <h3>Brand Notes Pack</h3>
+                  <p>Launch-ready brand system</p>
+                </div>
+              </div>
+
+              <div class="product-metrics">
+                <span class="metric-label">Sales</span>
+                <strong>41</strong>
+              </div>
+
+              <div class="product-metrics">
+                <span class="metric-label">Revenue</span>
+                <strong>$1,080</strong>
+              </div>
+            </article>
+
+            <article class="product-row" role="listitem">
+              <div class="product-info">
+                <div class="product-thumb forest"></div>
+                <div>
+                  <h3>Case Study Template</h3>
+                  <p>Personal portfolio narratives</p>
+                </div>
+              </div>
+
+              <div class="product-metrics">
+                <span class="metric-label">Sales</span>
+                <strong>17</strong>
+              </div>
+
+              <div class="product-metrics">
+                <span class="metric-label">Revenue</span>
+                <strong>$520</strong>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

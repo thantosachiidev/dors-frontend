@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dors — Navigation components</title>
+    <meta name="description" content="Dors top navigation and workspace sidebar component." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="navigation.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <a class="brand" href="index.html" aria-label="Dors home">
+        <img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" />
+        <span>Dors</span>
+      </a>
+
+      <nav class="public-links" aria-label="Public navigation">
+        <a href="index.html">Home</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="mina-okafor.html">Examples</a>
+      </nav>
+
+      <div class="top-actions">
+        <label class="search-box">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <span class="sr-only">Search</span>
+          <input type="search" placeholder="Search Dors" />
+          <kbd>/</kbd>
+        </label>
+        <button class="account-button" type="button" aria-expanded="false" aria-controls="account-menu"><span class="avatar">AS</span><span class="account-name">Ava Stone</span><span class="chevron" aria-hidden="true">⌄</span></button>
+        <div class="account-menu" id="account-menu" hidden>
+          <a href="dashboard.html">Your dashboard</a>
+          <a href="index.html#pricing">Settings</a>
+          <a href="signin.html">Sign out</a>
+        </div>
+      </div>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-navigation"><span class="menu-lines" aria-hidden="true"></span><span class="sr-only">Open navigation</span></button>
+    </header>
+
+    <div class="mobile-navigation" id="mobile-navigation" hidden>
+      <label class="search-box mobile-search"><span class="search-icon" aria-hidden="true">⌕</span><span class="sr-only">Search</span><input type="search" placeholder="Search Dors" /></label>
+      <nav aria-label="Mobile navigation"><a href="index.html">Home</a><a href="marketplace.html">Marketplace</a><a href="mina-okafor.html">Examples</a><a href="dashboard.html">Dashboard</a></nav>
+    </div>
+
+    <main class="specimen-page">
+      <section class="page-intro">
+        <p class="eyebrow">Navigation system</p>
+        <h1>Keep the way<br /><em>easy to find.</em></h1>
+        <p>The public bar helps people browse. The workspace rail keeps the creator’s day close at hand.</p>
+      </section>
+
+      <section class="workspace-demo" aria-label="Workspace navigation example">
+        <aside class="workspace-sidebar">
+          <div class="sidebar-heading"><span>Workspace</span><button type="button" aria-label="Collapse sidebar">←</button></div>
+          <nav class="sidebar-nav" aria-label="Workspace navigation">
+            <a href="dashboard.html"><span class="nav-symbol">S</span><span>Sites</span></a>
+            <a href="marketplace.html" class="active" aria-current="page"><span class="nav-symbol">M</span><span>Marketplace</span><span class="nav-count">12</span></a>
+            <a href="dashboard.html"><span class="nav-symbol">E</span><span>Earnings</span></a>
+            <a href="index.html#pricing"><span class="nav-symbol">G</span><span>Settings</span></a>
+          </nav>
+          <div class="sidebar-profile"><span class="avatar">AS</span><div><strong>Ava Stone</strong><small>Creator account</small></div></div>
+        </aside>
+
+        <div class="workspace-content">
+          <div class="content-topline"><div><p class="eyebrow">Marketplace</p><h2>Find your next starting point.</h2></div><span class="view-tag">Active state shown</span></div>
+          <div class="content-lines"><span></span><span></span><span></span></div>
+        </div>
+      </section>
+
+      <section class="rules" aria-labelledby="rules-title">
+        <div class="section-heading"><p class="eyebrow">Details</p><h2 id="rules-title">Navigation that holds its shape</h2></div>
+        <div class="rule-grid"><div><strong>Top bar</strong><p>Logo left, browse links centered, search and account actions right.</p></div><div><strong>Sidebar</strong><p>One active destination, one quiet count, and a profile anchor at the bottom.</p></div><div><strong>Mobile</strong><p>Search and all links move into a full-width menu below the top bar.</p></div></div>
+      </section>
+    </main>
+    <footer class="site-footer"><span>Dors / Interface system</span><a href="index.html">Back to Dors <span aria-hidden="true">↗</span></a></footer>
+    <script src="navigation.js"></script>
+  </body>
+</html>

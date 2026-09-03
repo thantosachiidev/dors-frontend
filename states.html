@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dors — Empty and error states</title>
+    <meta name="description" content="Clear empty and error states for Dors." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="states.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Dors home">
+        <img src="dors-high-resolution-logo-grayscale-transparent.png" alt="Dors logo" />
+        <span>Dors</span>
+      </a>
+      <span class="header-label">System states / 04</span>
+    </header>
+
+    <main class="states-page">
+      <header class="page-intro">
+        <p class="eyebrow">Clear by design</p>
+        <h1>Every dead end<br /><em>has a next step.</em></h1>
+        <p>Empty and error states that tell people what happened, why it matters, and what they can do now.</p>
+      </header>
+
+      <section class="states-grid" aria-label="Empty and error states">
+        <article class="state-card marketplace-state">
+          <div class="state-topline"><span class="state-number">01</span><span class="state-type">Marketplace</span></div>
+          <div class="state-symbol symbol-shelf" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="state-copy">
+            <h2>No products here yet.</h2>
+            <p>This marketplace is still getting started. Check back soon, or browse the full marketplace to find something ready to use.</p>
+            <a class="action-link" href="marketplace.html">Browse all products <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="state-card upload-state">
+          <div class="state-topline"><span class="state-number">02</span><span class="state-type">Product upload</span></div>
+          <div class="state-symbol symbol-file" aria-hidden="true"><span class="file-fold"></span><span class="file-line line-one"></span><span class="file-line line-two"></span><span class="file-line line-three"></span></div>
+          <div class="state-copy">
+            <h2>Your file didn’t upload.</h2>
+            <p>The connection dropped before the file finished uploading. Keep this window open and try again. Your product details are still here.</p>
+            <button class="action-link action-button" type="button">Try upload again <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+
+        <article class="state-card not-found-state">
+          <div class="state-topline"><span class="state-number">03</span><span class="state-type">Page error</span></div>
+          <div class="state-symbol symbol-404" aria-hidden="true">404</div>
+          <div class="state-copy">
+            <h2>That page has moved.</h2>
+            <p>The link points to a page that no longer exists. Return home, or use the marketplace to find the work you were looking for.</p>
+            <a class="action-link" href="index.html">Go to the homepage <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="state-card payment-state">
+          <div class="state-topline"><span class="state-number">04</span><span class="state-type">Checkout</span></div>
+          <div class="state-symbol symbol-payment" aria-hidden="true"><span class="card-shape"></span><span class="card-slash">!</span></div>
+          <div class="state-copy">
+            <h2>Payment didn’t go through.</h2>
+            <p>Your bank declined this payment, so the order was not placed and you were not charged. Check your details or use another card.</p>
+            <button class="action-link action-button" type="button">Try payment again <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>Dors / Product language</span><a href="index.html">Back to Dors <span aria-hidden="true">↗</span></a></footer>
+  </body>
+</html>
